@@ -1,34 +1,18 @@
 ---
-templateKey: 'blog-post'
-title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
+templateKey: blog-post
+title: Horse Scholarship!
 date: 2017-01-04T15:04:10.000Z
-featuredpost: true
-description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
+description: A scholarship for riders of horses! Yeehaw!
+featuredpost: false
+featuredimage: /img/horse.jpg
 tags:
   - jamaica
   - green beans
   - flavor
   - tasting
 ---
+Doggo ipsum he made many woofs aqua doggo most angery pupper I have ever seen length boy, doing me a frighten puggo. You are doin me a concern lotsa pats very jealous pupper pupperino blop lotsa pats waggy wags such treat, yapper puggo thicc boof many pats.  Many pats bork big ol pupper very jealous pupper extremely cuuuuuute ruff bork, such treat he made many woofs aqua doggo boofers. Maximum borkdrive fluffer big ol pupper long water shoob much ruin diet, maximum borkdrive bork. Mlem puggo I am bekom fat maximum borkdrive pupperino ur givin me a spook, floofs fat boi wow such tempt pupper.
 
-We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
+![horse](/img/horse.jpg)
 
-Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
-
-## A little history
-
-The Blue Mountains are considered by many to be a hiker's and camper's paradise. The traditional Blue Mountain trek is a 7-mile hike to the peak and consists of a 3,000-foot increase in elevation. Jamaicans prefer to reach the peak at sunrise, thus the 3–4 hour hike is usually undertaken in darkness. Since the sky is usually very clear in the mornings, Cuba can be seen in the distance.
-
->Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
-
-This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
-
-## What you need to know before trying
-
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
-
-Jamaican Blue Mountain Coffee is a globally protected certification mark, meaning only coffee certified by the Coffee Industry Board of Jamaica can be labeled as such. It comes from a recognized growing region in the Blue Mountain region of Jamaica, and its cultivation is monitored by the Coffee Industry Board of Jamaica.
-
-The Blue Mountains are generally located between Kingston to the south and Port Antonio to the north. Rising 7,402 ft, they are some of the highest mountains in the Caribbean. The climate of the region is cool and misty with high rainfall. The soil is rich, with excellent drainage. This combination of climate and soil is considered ideal for coffee.
+Most angery pupper I have ever seen long bois long water shoob I am bekom fat wrinkler you are doing me the shock long woofer, boofers doge boof borkf adorable doggo long bois, noodle horse ruff wow very biscit many pats you are doin me a concern. I am bekom fat tungg puggo doggo much ruin diet pupperino, heckin good boys and girls you are doin me a concern puggo very jealous pupper, many pats big ol pupper sub woofer heckin angery woofer. Woofer heck thicc fat boi extremely cuuuuuute, borkf shoober blop shooberino very taste wow, noodle horse very good spot borkdrive. Borkf borkdrive such treat heck, waggy wags.
