@@ -10,23 +10,7 @@ mainpitch:
     This is a mock site for scholarships
 description: >-
   This is a mock site for scholarships
-intro:
-  blurbs:
-    - image: /img/coffee.png
-      text: >
-        Doggo ipsum heck h*ck sub woofer the neighborhood pupper pupperino, very good spot very taste wow fluffer yapper, puggorino boofers most angery pupper I have ever seen. Doggorino long water shoob shooberino much ruin diet, porgo very hand that feed shibe. borkdrive.
-    - image: /img/coffee-gear.png
-      text: >
-        Doggo ipsum heck h*ck sub woofer the neighborhood pupper pupperino, very good spot very taste wow fluffer yapper, puggorino boofers most angery pupper I have ever seen. Doggorino long water shoob shooberino much ruin diet, porgo very hand that feed shibe. borkdrive.
-    - image: /img/tutorials.png
-      text: >
-        Doggo ipsum heck h*ck sub woofer the neighborhood pupper pupperino, very good spot very taste wow fluffer yapper, puggorino boofers most angery pupper I have ever seen. Doggorino long water shoob shooberino much ruin diet, porgo very hand that feed shibe. borkdrive.
-    - image: /img/meeting-space.png
-      text: >
-        Doggo ipsum heck h*ck sub woofer the neighborhood pupper pupperino, very good spot very taste wow fluffer yapper, puggorino boofers most angery pupper I have ever seen. Doggorino long water shoob shooberino much ruin diet, porgo very hand that feed shibe. borkdrive.
-  heading: What we offer
-  description: >
-    Doggo ipsum heck h*ck sub woofer the neighborhood pupper pupperino, very good spot very taste wow fluffer yapper, puggorino boofers most angery pupper I have ever seen. Doggorino long water shoob shooberino much ruin diet, porgo very hand that feed shibe. borkdrive.
+
 main:
   heading: Great coffee with no compromises
   description: >
