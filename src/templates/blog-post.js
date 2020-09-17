@@ -73,7 +73,10 @@ const BlogPost = ({ data }) => {
             />
             <meta
               name="image"
-              content={post.frontmatter.featuredimage.publicURL || null}
+              content={
+                `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}` ||
+                null
+              }
             />
             <meta
               property="og:title"
@@ -89,7 +92,10 @@ const BlogPost = ({ data }) => {
             />
             <meta
               property="og:image"
-              content={post.frontmatter.featuredimage.publicURL || null}
+              content={
+                `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}` ||
+                null
+              }
             />
             <meta name="twitter:card" content="summary_large_image" />
             <meta
@@ -106,7 +112,10 @@ const BlogPost = ({ data }) => {
             />
             <meta
               name="twitter:image"
-              content={post.frontmatter.featuredimage.publicURL || null}
+              content={
+                `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}` ||
+                null
+              }
             />
           </Helmet>
         }
