@@ -13,6 +13,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  termsLink,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -42,6 +43,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
+      <Link to={`/terms/${termsLink}`}>Terms and Conditions</Link>
     </section>
   );
 };
@@ -119,6 +121,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        termsLink={post.frontmatter.alugAlternate}
       />
     </Layout>
   );
@@ -144,6 +147,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        alugAlternate
         tags
         featuredimage {
           publicURL
