@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Watch Scholarship
+alugAlternate: watch-scholarship
 date: 2020-09-11T01:47:32.316Z
 description: o, very good spot very taste wow fluffer yapper, puggorino boofers
   most angery pupper I have ever seen. Doggorino long water shoob shooberino
