@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Wolf Scholarship
+alugAlternate: wolf-scholarship
 date: 2016-12-17T15:04:10.000Z
 description: Howl at the moon for this fantastic scholarship!
 featuredpost: true
