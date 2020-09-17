@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Coffee Scholarship
+alugAlternate: coffee-scholarship
 date: 2017-01-04T15:04:10.000Z
 description: Raise a cup for the scholarship for lovers of coffee!
 featuredpost: false
