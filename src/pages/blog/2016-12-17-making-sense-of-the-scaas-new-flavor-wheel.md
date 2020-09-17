@@ -10,14 +10,14 @@ tags:
   - scholarships
 terms: >-
   Doggo ipsum long doggo puggorino snoot shoober pupper dat tungg tho, ruff I am
-  bekom fat borkf puggorino. The neighborhood pupper noodle horse waggy wags,
+  bekom fat borkf puggorino. The neighborhood pupper noo**dle horse waggy wags,
   sub woofer. Thicc wow such tempt pupperino clouds you are doing me a frighten
   snoot, very hand that feed shibe wrinkler fluffer heckin. Tungg very jealous
-  pupper floofs smol clouds sub woofer maximum borkdrive, very hand that feed
+  pupper floofs smol clouds sub woofer maximum borkdrive, very ha**nd that feed
   shibe he made many woofs sub woofer blep fat boi.
 
 
-  Sub woofer ruff super chub yapper heckin, floofs lotsa pats vvv blep, corgo long doggo he made many woofs. Most angery pupper I have ever seen floofs blop you are doing me a frighten pupper waggy wags, very taste wow shibe many pats. Much ruin diet wow very biscit long water shoob wrinkler, long bois boof doggo, borkdrive aqua doggo. Borkdrive shooberino heckin good boys very taste wow puggo he made many woofs what a nice floof blop, big ol pupper waggy wags extremely cu
+  Sub woofer ruff super chub yapper heckin, *floofs lotsa pats vvv blep, corgo long doggo he made many woofs. Most angery pupper I have ever seen floofs blop you are doing me a frighten pupper waggy wags, very taste wow shibe many pats. Much ruin diet wow very biscit long water shoob wrinkler, long bois boof doggo, borkdrive aqua doggo. Borkdrive shooberino hec*kin good boys very taste wow puggo he made many woofs what a nice floof blop, big ol pupper waggy wags extremely cu
 ---
 ![wolf scholarship](/img/wolf.jpg)
 
