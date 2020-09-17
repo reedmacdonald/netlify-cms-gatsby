@@ -18,6 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               tags
               templateKey
+              alugAlternate
             }
           }
         }
@@ -44,6 +45,17 @@ exports.createPages = ({ actions, graphql }) => {
           id,
         },
       });
+      if (edge.node.frontmatter.alugAlternate) {
+        createPage({
+          path: `/terms/${edge.node.frontmatter.alugAlternate}`,
+          tags: edge.node.frontmatter.tags,
+          component: path.resolve(`src/templates/terms-conditions.js`),
+          // additional data can be passed via context
+          context: {
+            id,
+          },
+        });
+      }
     });
 
     // Tag pages:

@@ -60,7 +60,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
+        content={post.frontmatter.terms}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
@@ -97,6 +97,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        terms
       }
     }
   }
