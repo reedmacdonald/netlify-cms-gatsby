@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: New Scholarship
+alugAlternate: new-scholarship
 date: 2020-09-17T00:24:25.174Z
 description: A new scholarship
 featuredpost: false
