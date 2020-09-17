@@ -57,6 +57,10 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
   console.log(post.frontmatter, "<---post");
+  console.log(
+    `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}`,
+    "<---Url for image"
+  );
 
   return (
     <Layout>
@@ -73,10 +77,7 @@ const BlogPost = ({ data }) => {
             />
             <meta
               name="image"
-              content={
-                `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}` ||
-                null
-              }
+              content={`https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}`}
             />
             <meta
               property="og:title"
@@ -86,10 +87,7 @@ const BlogPost = ({ data }) => {
               property="og:description"
               content={post.frontmatter.description || "description"}
             />
-            <meta
-              property="og:type"
-              content={post.frontmatter ? "article" : null}
-            />
+            <meta property="og:type" content={"article"} />
             <meta
               property="og:image"
               content={
@@ -108,14 +106,14 @@ const BlogPost = ({ data }) => {
             />
             <meta
               property="og:url"
-              content={post.frontmatter.url || "https://google.com"}
+              content={
+                `https://gallant-ptolemy-269c61.netlify.app${post.fields.slug}` ||
+                "https://google.com"
+              }
             />
             <meta
               name="twitter:image"
-              content={
-                `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}` ||
-                null
-              }
+              content={`https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}`}
             />
           </Helmet>
         }
@@ -139,6 +137,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
