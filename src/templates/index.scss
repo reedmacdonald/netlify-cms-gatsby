@@ -1,0 +1,17 @@
+.idk {
+  border: 1px solid red;
+}
+@font-face {
+  font-family: OmnesPro;
+  src: url("https://scholly-app.s3.amazonaws.com/live/fonts/omnes/Omnes-Medium.otf")
+    format("opentype");
+}
+* {
+  font-family: OmnesPro;
+}
+h1 {
+  color: #4a4a4a;
+  font-size: 65px;
+  line-height: 63px;
+  letter-spacing: 1.38px;
+}
