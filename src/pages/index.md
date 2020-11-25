@@ -25,6 +25,12 @@ mainpitch:
 title: Find life-changing scholarships made for you
 image: /img/screen-shot-2020-11-25-at-9.34.48-am.png
 otherimage: /img/screen-shot-2020-11-25-at-10.29.39-am.png
+step3:
+  title: "Step III: Apply to new scholarships every month"
+  description: Every month, we added thousands of new scholarships so our members
+    never miss an opportunity to win big. Every year, the average Scholly member
+    gets matched with more than $2 million dollars in scholarships!
+  image: /img/screen-shot-2020-11-25-at-1.47.31-pm.png
 description: This is a mock site for scholarships
 intro:
   heading: idk
