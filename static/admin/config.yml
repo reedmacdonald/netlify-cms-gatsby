@@ -78,6 +78,21 @@ collections:
                   { label: Step 2 Image, name: image, widget: image },
                 ],
             }
+          - {
+              label: Step 3,
+              name: step3,
+              widget: object,
+              fields:
+                [
+                  { label: Step 3 Title, name: title, widget: string },
+                  {
+                    label: Step 3 Description,
+                    name: description,
+                    widget: text,
+                  },
+                  { label: Step 3 Image, name: image, widget: image },
+                ],
+            }
           - { label: Description, name: description, widget: string }
           - {
               label: Intro,
