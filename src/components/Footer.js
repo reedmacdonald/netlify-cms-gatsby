@@ -6,87 +6,45 @@ import facebook from "../img/social/facebook.svg";
 import instagram from "../img/social/instagram.svg";
 import twitter from "../img/social/twitter.svg";
 import vimeo from "../img/social/vimeo.svg";
+import "./styles.scss";
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer style={{ backgroundColor: "grey", borderTopRadius: "25%" }}>
-        <ul>
-          <li>
-            <Link to="/" className="navbar-item">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/about">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/products">
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/contact/examples">
-              Form Examples
-            </Link>
-          </li>
-          <li>
-            <a
-              className="navbar-item"
-              href="/admin/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Admin
-            </a>
-          </li>
-        </ul>
-
-        <ul>
-          <li>
-            <Link className="navbar-item" to="/blog">
-              Latest Scholarships
-            </Link>
-          </li>
-          <li>
-            <Link className="navbar-item" to="/contact">
-              Contact
-            </Link>
-          </li>
-        </ul>
-
-        <a title="facebook" href="https://facebook.com">
-          <img
-            src={facebook}
-            alt="Facebook"
-            style={{ width: "1em", height: "1em" }}
-          />
-        </a>
-        <a title="twitter" href="https://twitter.com">
-          <img
-            className="fas fa-lg"
-            src={twitter}
-            alt="Twitter"
-            style={{ width: "1em", height: "1em" }}
-          />
-        </a>
-        <a title="instagram" href="https://instagram.com">
-          <img
-            src={instagram}
-            alt="Instagram"
-            style={{ width: "1em", height: "1em" }}
-          />
-        </a>
-        <a title="vimeo" href="https://vimeo.com">
-          <img
-            src={vimeo}
-            alt="Vimeo"
-            style={{ width: "1em", height: "1em" }}
-          />
-        </a>
-      </footer>
+      <div
+        style={{
+          backgroundColor: "rgb(245,245,245)",
+          borderTopRadius: "25%",
+          borderTopLeftRadius: "50%",
+          borderTopRightRadius: "50%",
+          display: "grid",
+          placeItems: "center",
+          height: "300px",
+        }}
+      >
+        <div className={"grid-three"} style={{ width: "50%" }}>
+          <div>
+            <div>About Scholly</div>
+            <div>Mission</div>
+            <div>Contact Us</div>
+            <div>Press</div>
+            <div>Careers</div>
+            <div>Blog</div>
+          </div>
+          <div>
+            <div>Other</div>
+            <div>Submit a Scholarship</div>
+            <div>FAQ</div>
+            <div>Privacy Policy</div>
+            <div>CCPA Request</div>
+            <div>Do Not Sell My Personal Information</div>
+          </div>
+          <div>
+            <div>Scholly Logo</div>
+            <div>Social Logos</div>
+          </div>
+        </div>
+      </div>
     );
   }
 };
