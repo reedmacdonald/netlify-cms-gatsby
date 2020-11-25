@@ -17,8 +17,9 @@ export const IndexPageTemplate = ({
   description,
   intro,
   otherimage,
+  step1,
 }) => {
-  console.log(otherimage, "<-----otherimage");
+  console.log(step1, "<-----step1");
   return (
     <div style={{ width: "1100px", margin: "0 auto" }}>
       <div className={"grid-four"}>
@@ -36,8 +37,15 @@ export const IndexPageTemplate = ({
         </div>
         <Image fluid={image.childImageSharp.fluid} />
       </div>
-      <h1>As seen on</h1>
+      <h1 style={{ textAlign: "center" }}>As seen on</h1>
       <Image fluid={otherimage.childImageSharp.fluid} />
+      <div className={"grid-four"}>
+        <div>
+          <h1>{step1.title}</h1>
+          <h3>{step1.description}</h3>
+        </div>
+        <Image fluid={step1.image.childImageSharp.fluid} />
+      </div>
     </div>
   );
 };
@@ -57,6 +65,7 @@ const IndexPage = ({ data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
         otherimage={frontmatter.otherimage}
+        step1={frontmatter.step1}
       />
     </Layout>
   );
@@ -73,6 +82,17 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        step1 {
+          description
+          title
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }

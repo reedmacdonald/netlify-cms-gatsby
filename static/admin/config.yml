@@ -53,7 +53,7 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
-              label: step1,
+              label: Step 1,
               name: step1,
               widget: object,
               fields:
@@ -61,6 +61,21 @@ collections:
                   { label: Step1Title, name: title, widget: string },
                   { label: Step1Description, name: description, widget: text },
                   { label: Step1Image, name: image, widget: image },
+                ],
+            }
+          - {
+              label: Step 2,
+              name: step1,
+              widget: object,
+              fields:
+                [
+                  { label: Step 2 Title, name: title, widget: string },
+                  {
+                    label: Step 2 Description,
+                    name: description,
+                    widget: text,
+                  },
+                  { label: Step 2 Image, name: image, widget: image },
                 ],
             }
           - { label: Description, name: description, widget: string }
