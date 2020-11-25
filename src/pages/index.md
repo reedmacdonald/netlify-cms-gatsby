@@ -2,6 +2,7 @@
 templateKey: index-page
 title: Find life-changing scholarships made for you
 image: /img/screen-shot-2020-11-25-at-9.34.48-am.png
+otherimage: /img/screen-shot-2020-11-25-at-10.29.39-am.png
 heading: Find life-changing scholarships made for you
 subheading: "Scholly is the #1 college scholarship app in the world and has
   helped students win more than $100 million dollars. Join today and start
