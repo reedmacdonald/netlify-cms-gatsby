@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Find life-changing scholarships made for you
-image: /img/college2.jpg
+image: /img/screen-shot-2020-11-25-at-9.34.48-am.png
 heading: Find life-changing scholarships made for you
 subheading: We have other stuff, too!
 mainpitch:
