@@ -1,63 +1,82 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import CarouselSlider from "react-carousel-slider";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Image from "gatsby-image";
 
-class BlogRoll extends React.Component {
-  render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
-    console.log(data, "<---data");
+const BlogRoll = (props) => {
+  const { data } = props;
+  const { edges: posts } = data.allMarkdownRemark;
 
+  let newArray;
+  const newData = [<h1>Hello World</h1>, <h1>Hi World</h1>];
+  let newPosts = posts.map((post) => {
+    console.log(post, "<<---post");
     return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? "is-featured" : ""
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+      <div
+        style={{
+          width: "300px",
+          borderRadius: "20px",
+          backgroundColor: "rgb(245,245,245)",
+        }}
+      >
+        <Link
+          className="title has-text-primary is-size-4"
+          to={post.node.fields.slug}
+        >
+          <div
+            style={{
+              maxHeight: "100%",
+              borderRadius: "20px",
+              padding: "10px",
+            }}
+          >
+            <div
+              style={{
+                maxHeight: "100px",
+                borderTopRightRadius: "20px",
+                borderTopLeftRadius: "20px",
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                fluid={
+                  post.node.frontmatter.featuredimage.childImageSharp.fluid
+                }
+              />
             </div>
-          ))}
+            <h4 style={{ color: "black" }}>{post.node.frontmatter.title}</h4>
+            <h5 style={{ color: "black" }}>
+              {post.node.excerpt.substring(0, 100) + "..."}
+            </h5>
+          </div>
+        </Link>
       </div>
     );
-  }
-}
+  });
+  let sliderBoxStyle = {
+    background: "transparent",
+  };
+  let dotsSetting = {
+    placeOn: "top",
+    style: {
+      dotSize: "5px",
+      currDotColor: "rgba(155, 108, 27, 0.5)",
+      marginTop: "0px",
+      display: "none",
+    },
+  };
+
+  return (
+    <CarouselSlider
+      accLe={{ dots: false, buton: false, flag: false }}
+      sliderBoxStyle={sliderBoxStyle}
+      slideCpnts={newPosts}
+      dotsSetting={dotsSetting}
+    />
+  );
+};
 
 BlogRoll.propTypes = {
   data: PropTypes.shape({
@@ -89,7 +108,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 300, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
