@@ -11,6 +11,13 @@ step1:
     life-changing scholarships based on your interests, accomplishments, and
     unique traits
   image: /img/screen-shot-2020-11-25-at-10.53.32-am.png
+step2:
+  title: "Step II: Get matched with incredible scholarships"
+  description: With your Scholly student profile complete, our scholarship AI will
+    compare your profile to thousands of active scholarships to create a
+    prioritized list of opportunities. The scholarships with the highest Scholly
+    Score are the ones you should apply to first!
+  image: /img/screen-shot-2020-11-25-at-1.32.35-pm.png
 mainpitch:
   title: Why Us
   description: |
