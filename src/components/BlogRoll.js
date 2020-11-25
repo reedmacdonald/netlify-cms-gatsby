@@ -8,7 +8,7 @@ import Image from "gatsby-image";
 const BlogRoll = (props) => {
   const { data } = props;
   const { edges: posts } = data.allMarkdownRemark;
-
+  //hello
   let newArray;
   const newData = [<h1>Hello World</h1>, <h1>Hi World</h1>];
   let newPosts = posts.map((post) => {
