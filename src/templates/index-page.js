@@ -6,6 +6,8 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import idk from "./index.scss";
 
+import Image from "gatsby-image";
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -15,10 +17,34 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  console.log(title, "<---title");
   return (
-    <div style={{ width: "900px", margin: "0 auto" }}>
-      <h1>{title}</h1>
+    <div className={"grid-four"} style={{ width: "1100px", margin: "0 auto" }}>
+      <div>
+        <h1>{title}</h1>
+        <h3>{subheading}</h3>
+        <div className="holder92">
+          <input type="text" className="leftThing992" placeholder="email" />
+          <span className="rightThing992">
+            <button className="rightThingButton2">
+              Find Scholarships Today
+            </button>
+          </span>
+          <div
+            className="leftThing992-error"
+            style={{
+              display: "none",
+              width: "100%",
+              fontSize: "16px",
+              fontWeight: "500",
+              margin: "5px 10px",
+              color: "#fb113f",
+            }}
+          >
+            Email invalid!
+          </div>
+        </div>
+      </div>
+      <Image fluid={image.childImageSharp.fluid} />
     </div>
   );
 };
