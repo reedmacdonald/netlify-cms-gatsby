@@ -1,10 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
-import idk from "./index.scss";
+import AdvancedButton from "../components/AdvancedButton";
+import "./index.scss";
 
 import Image from "gatsby-image";
 
@@ -27,17 +27,7 @@ export const IndexPageTemplate = ({
         <div>
           <h1>{title}</h1>
           <h3>{subheading}</h3>
-          <div className="holder92">
-            <input type="text" className="leftThing992" placeholder="email" />
-            <span className="rightThing992">
-              <div
-                style={{ display: "grid", placeItems: "center" }}
-                className="rightThingButton2"
-              >
-                Find Scholarships Today
-              </div>
-            </span>
-          </div>
+          <AdvancedButton />
         </div>
         <Image
           fluid={image.childImageSharp.fluid}
@@ -56,8 +46,8 @@ export const IndexPageTemplate = ({
       <div className={"grid-four margins"}>
         <Image fluid={step2.image.childImageSharp.fluid} alt={"Step 2"} />
         <div>
-          <h1>{step2.title}</h1>
-          <h3>{step2.description}</h3>
+          <h1 style={{ textAlign: "right" }}>{step2.title}</h1>
+          <h3 style={{ textAlign: "right" }}>{step2.description}</h3>
         </div>
       </div>
       <div className={"grid-four margins"}>
@@ -67,12 +57,12 @@ export const IndexPageTemplate = ({
         </div>
         <Image fluid={step3.image.childImageSharp.fluid} alt={"Step3"} />
       </div>
-      <h1 style={{ textAlign: "center" }}>Here's wat our users have to say</h1>
+      <h1 style={{ textAlign: "center" }}>Here's what our users have to say</h1>
       <h3 style={{ textAlign: "center" }}>
         Don’t just take our word for it, here are some of our thousands
-        <br /> of user’s thought on Scholly’s success platform
+        <br /> of user’s thought on Schalli’s success platform
       </h3>
-      <div style={{ textAlign: "center" }}>
+      <div className="margins" style={{ textAlign: "center" }}>
         <iframe
           width="560"
           height="315"
@@ -82,7 +72,22 @@ export const IndexPageTemplate = ({
           allowFullScreen
         ></iframe>
       </div>
-      <BlogRoll />
+      <div className={"margins"}>
+        <BlogRoll />
+      </div>
+      <div className="margins">
+        <h1 style={{ textAlign: "center" }}>Sign Up Today</h1>
+        <h3 style={{ textAlign: "center" }}>
+          Don’t just take our word for it, here are some of our thousands of
+          user’s thoughts on
+          <br /> Schalli’s success platform
+        </h3>
+      </div>
+      <div className={"margins"} style={{ textAlign: "center" }}>
+        <div style={{ display: "inline-block" }}>
+          <AdvancedButton />
+        </div>
+      </div>
     </div>
   );
 };

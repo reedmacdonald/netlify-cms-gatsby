@@ -35,7 +35,6 @@ const BlogRoll = (props) => {
     >
       <Slider>
         {newPosts.map((post, index) => {
-          console.log(post, "<----post");
           return (
             <Slide style={{ width: "300px" }} index={index}>
               <div

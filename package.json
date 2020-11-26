@@ -29,8 +29,10 @@
     "pure-react-carousel": "^1.27.6",
     "react": "^16.8.4",
     "react-carousel-slider": "^2.0.13",
+    "react-confetti": "^6.0.0",
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
+    "react-use": "^15.3.4",
     "uuid": "^7.0.0"
   },
   "keywords": [
