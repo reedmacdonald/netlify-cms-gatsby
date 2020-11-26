@@ -58,72 +58,69 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(post.frontmatter, "<---post");
-  console.log(
-    `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}`,
-    "<---Url for image"
-  );
 
   return (
-    <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{post.frontmatter.title || "title"}</title>
-            <meta
-              name="description"
-              content={post.frontmatter.description || "description"}
-            />
-            <meta
-              name="image"
-              content={`https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}`}
-            />
-            <meta
-              property="og:title"
-              content={post.frontmatter.title || "title"}
-            />
-            <meta
-              property="og:description"
-              content={post.frontmatter.description || "description"}
-            />
-            <meta property="og:type" content={"article"} />
-            <meta
-              property="og:image"
-              content={
-                `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}` ||
-                null
-              }
-            />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta
-              name="twitter:title"
-              content={post.frontmatter.title || "title"}
-            />
-            <meta
-              name="twitter:description"
-              content={post.frontmatter.description || "description"}
-            />
-            <meta
-              property="og:url"
-              content={
-                `https://gallant-ptolemy-269c61.netlify.app${post.fields.slug}` ||
-                "https://google.com"
-              }
-            />
-            <meta
-              name="twitter:image"
-              content={`https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        termsLink={post.frontmatter.alugAlternate}
-      />
-    </Layout>
+    <>
+      <Layout>
+        <BlogPostTemplate
+          content={post.html}
+          contentComponent={HTMLContent}
+          description={post.frontmatter.description}
+          helmet={
+            <Helmet titleTemplate="%s | Blog">
+              <title>{post.frontmatter.title || "title"}</title>
+              <meta
+                name="description"
+                content={post.frontmatter.description || "description"}
+              />
+              <meta
+                name="image"
+                content={`https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}`}
+              />
+              <meta
+                property="og:title"
+                content={post.frontmatter.title || "title"}
+              />
+              <meta
+                property="og:description"
+                content={post.frontmatter.description || "description"}
+              />
+              <meta property="og:type" content={"article"} />
+              <meta
+                property="og:image"
+                content={
+                  `https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}` ||
+                  null
+                }
+              />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta
+                name="twitter:title"
+                content={post.frontmatter.title || "title"}
+              />
+              <meta
+                name="twitter:description"
+                content={post.frontmatter.description || "description"}
+              />
+              <meta
+                property="og:url"
+                content={
+                  `https://gallant-ptolemy-269c61.netlify.app${post.fields.slug}` ||
+                  "https://google.com"
+                }
+              />
+              <meta
+                name="twitter:image"
+                content={`https://gallant-ptolemy-269c61.netlify.app${post.frontmatter.featuredimage.publicURL}`}
+              />
+            </Helmet>
+          }
+          tags={post.frontmatter.tags}
+          title={post.frontmatter.title}
+          termsLink={post.frontmatter.alugAlternate}
+        />
+      </Layout>
+    </>
   );
 };
 

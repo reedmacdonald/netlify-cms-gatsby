@@ -21,7 +21,6 @@ export const IndexPageTemplate = ({
   step2,
   step3,
 }) => {
-  console.log(step2, "<-----step2");
   return (
     <div style={{ width: "1100px", margin: "0 auto" }}>
       <div className={"grid-four margins"}>
@@ -40,10 +39,13 @@ export const IndexPageTemplate = ({
             </span>
           </div>
         </div>
-        <Image fluid={image.childImageSharp.fluid} />
+        <Image
+          fluid={image.childImageSharp.fluid}
+          alt={"Phone with the Scholly App on it"}
+        />
       </div>
       <h1 style={{ textAlign: "center" }}>As seen on</h1>
-      <Image fluid={otherimage.childImageSharp.fluid} />
+      <Image fluid={otherimage.childImageSharp.fluid} alt={"Step 1"} />
       <div className={"grid-four margins"}>
         <div>
           <h1>{step1.title}</h1>
@@ -52,7 +54,7 @@ export const IndexPageTemplate = ({
         <Image fluid={step1.image.childImageSharp.fluid} />
       </div>
       <div className={"grid-four margins"}>
-        <Image fluid={step2.image.childImageSharp.fluid} />
+        <Image fluid={step2.image.childImageSharp.fluid} alt={"Step 2"} />
         <div>
           <h1>{step2.title}</h1>
           <h3>{step2.description}</h3>
@@ -63,7 +65,7 @@ export const IndexPageTemplate = ({
           <h1>{step3.title}</h1>
           <h3>{step3.description}</h3>
         </div>
-        <Image fluid={step3.image.childImageSharp.fluid} />
+        <Image fluid={step3.image.childImageSharp.fluid} alt={"Step3"} />
       </div>
       <h1 style={{ textAlign: "center" }}>Here's wat our users have to say</h1>
       <h3 style={{ textAlign: "center" }}>
@@ -95,9 +97,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
         otherimage={frontmatter.otherimage}
         step1={frontmatter.step1}
         step2={frontmatter.step2}
@@ -163,25 +163,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        mainpitch {
-          title
-          description
-        }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }

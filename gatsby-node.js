@@ -40,7 +40,6 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
-        // additional data can be passed via context
         context: {
           id,
         },
@@ -50,7 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
           path: `/terms/${edge.node.frontmatter.alugAlternate}`,
           tags: edge.node.frontmatter.tags,
           component: path.resolve(`src/templates/terms-conditions.js`),
-          // additional data can be passed via context
+
           context: {
             id,
           },
