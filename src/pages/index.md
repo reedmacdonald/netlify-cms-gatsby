@@ -1,21 +1,21 @@
 ---
 templateKey: index-page
-heading: Find life-changing scholarships made for you
-subheading: "Scholly is the #1 college scholarship app in the world and has
+heading: Find life-changing schalarships made for you
+subheading: "Schalli is the #1 college schalarship app in the world and has
   helped students win more than $100 million dollars. Join today and start
-  matching with scholarships in minutes."
+  matching with schalarships in minutes."
 step1:
-  title: "Step I: Complete your Scholly student profile"
+  title: "Step I: Complete your Schalli student profile"
   description: By taking five-minutes to tell us what makes you YOU, our
-    proprietary scholarship matching algorithm is able to match you with
-    life-changing scholarships based on your interests, accomplishments, and
+    proprietary schalarship matching algorithm is able to match you with
+    life-changing schalarships based on your interests, accomplishments, and
     unique traits
   image: /img/screen-shot-2020-11-25-at-10.53.32-am.png
 step2:
-  title: "Step II: Get matched with incredible scholarships"
-  description: With your Scholly student profile complete, our scholarship AI will
-    compare your profile to thousands of active scholarships to create a
-    prioritized list of opportunities. The scholarships with the highest Scholly
+  title: "Step II: Get matched with incredible schalarships"
+  description: With your Schalli student profile complete, our schalarship AI will
+    compare your profile to thousands of active schalarships to create a
+    prioritized list of opportunities. The schalarships with the highest Schalli
     Score are the ones you should apply to first!
   image: /img/screen-shot-2020-11-25-at-1.32.35-pm.png
 mainpitch:
@@ -26,12 +26,12 @@ title: Find life-changing scholarships made for you
 image: /img/screen-shot-2020-11-25-at-9.34.48-am.png
 otherimage: /img/screen-shot-2020-11-25-at-10.29.39-am.png
 step3:
-  title: "Step III: Apply to new scholarships every month"
+  title: "Step III: Apply to new schalarships every month"
   description: Every month, we added thousands of new scholarships so our members
-    never miss an opportunity to win big. Every year, the average Scholly member
+    never miss an opportunity to win big. Every year, the average Schalli member
     gets matched with more than $2 million dollars in scholarships!
   image: /img/screen-shot-2020-11-25-at-1.47.31-pm.png
-description: This is a mock site for scholarships
+description: This is a mock site for schalarships
 intro:
   heading: idk
   description: idk
