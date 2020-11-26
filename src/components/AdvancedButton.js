@@ -16,7 +16,6 @@ const AdvancedButton = () => {
   const onClick = () => {
     if (isEmail(email)) {
       setShowConfetti(true);
-
       setError(false);
       setTimeout(() => {
         /* window.location.replace(
