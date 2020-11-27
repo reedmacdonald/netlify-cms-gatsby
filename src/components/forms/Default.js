@@ -36,7 +36,8 @@ const DefaultForm=(props)=>{
         <div className={'grid-four'}>
             <input label='Major (if applicable)' placeholder='Political Science'/>
             <select label='State of Residence' name='state' id='state'>
-                {props.grades.map((x)=>{return (<select value={x}></select>)})}
+                {/*props.grades.map((x)=>{return (<select value={x}></select>)})*/}
+                <select value='value1'>A Value</select>
             </select>
         <select label='1st-Generation Student' name='state' id='state'>
             <option value='Yes'>California</option>
