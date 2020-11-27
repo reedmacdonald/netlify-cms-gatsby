@@ -36,6 +36,9 @@ gradeLevels:
   - College Freshman
   - Graduate Student
 color: rgb(234,204,197)
+protected: true
+live: true
+essayQuestion: What is the scariest thing?
 ---
 ![watch](/img/watch.jpg)
 
