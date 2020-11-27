@@ -18,9 +18,9 @@ const AdvancedButton = () => {
       setShowConfetti(true);
       setError(false);
       setTimeout(() => {
-        /* window.location.replace(
+        window.location.assign(
           `http://search.myscholly.com/register?email=${email}`
-        );*/
+        );
       }, 3000);
     } else {
       setError(true);
