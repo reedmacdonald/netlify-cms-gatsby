@@ -35,7 +35,7 @@ gradeLevels:
   - High School Freshman
   - College Freshman
   - Graduate Student
-color: transparent
+color: rgb(234,204,197)
 ---
 ![watch](/img/watch.jpg)
 
