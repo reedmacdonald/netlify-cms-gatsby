@@ -19,7 +19,6 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               templateKey
               alugAlternate
-              color
             }
           }
         }

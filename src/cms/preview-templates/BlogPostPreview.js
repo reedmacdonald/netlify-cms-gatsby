@@ -14,11 +14,4 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
   )
 }
 
-BlogPostPreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  widgetFor: PropTypes.func,
-}
-
 export default BlogPostPreview

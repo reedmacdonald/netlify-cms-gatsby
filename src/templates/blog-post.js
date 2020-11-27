@@ -15,13 +15,12 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   termsLink,
-  gradeLevels,
-  color
+  gradeLevels
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section" style={{backgroundColor:color}}>
+    <section className="section" style={{backgroundColor:'blue'}}>
       {helmet || ""}
       <div className="container content">
         <div className="columns">
@@ -50,14 +49,6 @@ export const BlogPostTemplate = ({
       <Link to={`/terms/${termsLink}`}>Terms and Conditions</Link>
     </section>
   );
-};
-
-BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
 };
 
 const BlogPost = ({ data }) => {
@@ -124,7 +115,6 @@ const BlogPost = ({ data }) => {
           termsLink={post.frontmatter.alugAlternate}
           typeOfForm={post.frontmatter.typeOfForm}
           gradeLevels={post.frontmatter.gradeLevels}
-          color={post.frontmatter.color}
         />
       </Layout>
     </>
@@ -152,7 +142,6 @@ export const pageQuery = graphql`
         }
         typeOfForm
         gradeLevels
-        color
       }
     }
   }
