@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
+import ScholarshipRoll from "../components/ScholarshipRoll";
 import AdvancedButton from "../components/AdvancedButton";
 import "./index.scss";
 
@@ -73,7 +73,7 @@ export const IndexPageTemplate = ({
         ></iframe>
       </div>
       <div className={"margins"}>
-        <BlogRoll />
+        <ScholarshipRoll />
       </div>
       <div className="margins">
         <h1 style={{ textAlign: "center" }}>Sign Up Today</h1>

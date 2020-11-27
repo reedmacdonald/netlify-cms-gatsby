@@ -1,7 +1,7 @@
 import React from "react";
 
 import Layout from "../../components/Layout";
-import BlogRoll from "../../components/BlogRoll";
+import ScholarshipRoll from "../../components/ScholarshipRoll";
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -28,7 +28,7 @@ export default class BlogIndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <BlogRoll />
+              <ScholarshipRoll />
             </div>
           </div>
         </section>

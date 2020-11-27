@@ -8,11 +8,11 @@ import {
   ButtonBack,
   ButtonNext,
 } from "pure-react-carousel";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import Image from "gatsby-image";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
-const BlogRoll = (props) => {
+const ScholarshipRoll = (props) => {
   const { data } = props;
   const { edges: posts } = data.allMarkdownRemark;
   let newArray;
@@ -98,7 +98,7 @@ const BlogRoll = (props) => {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query ScholarshipRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
@@ -128,6 +128,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <ScholarshipRoll data={data} count={count} />}
   />
 );

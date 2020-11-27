@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Default from '../components/forms/Default'
 
 export const BlogPostTemplate = ({
   content,
@@ -14,11 +15,13 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   termsLink,
+  gradeLevels,
+  color
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section className="section" style={{backgroundColor:color}}>
       {helmet || ""}
       <div className="container content">
         <div className="columns">
@@ -28,6 +31,7 @@ export const BlogPostTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
+            <Default grades={gradeLevels}/>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -118,16 +122,13 @@ const BlogPost = ({ data }) => {
           tags={post.frontmatter.tags}
           title={post.frontmatter.title}
           termsLink={post.frontmatter.alugAlternate}
+          typeOfForm={post.frontmatter.typeOfForm}
+          gradeLevels={post.frontmatter.gradeLevels}
+          color={post.frontmatter.color}
         />
       </Layout>
     </>
   );
-};
-
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
 };
 
 export default BlogPost;
@@ -149,6 +150,9 @@ export const pageQuery = graphql`
         featuredimage {
           publicURL
         }
+        typeOfForm
+        gradeLevels
+        color
       }
     }
   }
