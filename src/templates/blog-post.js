@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
@@ -15,12 +14,13 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   termsLink,
-  gradeLevels
+  gradeLevels,
+  color
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section" style={{backgroundColor:'blue'}}>
+    <section className="section" style={{backgroundColor:color}}>
       {helmet || ""}
       <div className="container content">
         <div className="columns">
@@ -41,12 +41,12 @@ export const BlogPostTemplate = ({
                     </li>
                   ))}
                 </ul>
+                <Link to={`/terms/${termsLink}`}>Terms and Conditions</Link>
               </div>
             ) : null}
           </div>
         </div>
       </div>
-      <Link to={`/terms/${termsLink}`}>Terms and Conditions</Link>
     </section>
   );
 };
@@ -115,6 +115,7 @@ const BlogPost = ({ data }) => {
           termsLink={post.frontmatter.alugAlternate}
           typeOfForm={post.frontmatter.typeOfForm}
           gradeLevels={post.frontmatter.gradeLevels}
+          color={post.frontmatter.color}
         />
       </Layout>
     </>
@@ -142,6 +143,7 @@ export const pageQuery = graphql`
         }
         typeOfForm
         gradeLevels
+        color
       }
     }
   }

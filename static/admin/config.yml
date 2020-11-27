@@ -36,6 +36,8 @@ collections:
       - { label: "Type of Form", name: "typeOfForm", widget: "select", options: ["Default","Long with Essay","Short with Essay"], default:"Default" }
       - { label: "Grade Levels", name: "gradeLevels", widget: "select", multiple: true, options: ["High School Freshman","High School Sophomore","High School Junior","High School Senior","College Freshman","College Sophomore","College Junior","College Senior","Graduate Student"], default: ["High School Freshman","High School Sophomore"] }
       - { label: 'Color', name: 'color', widget: 'string' }
+      - { label: "Password Protected?", name: "protected", widget: "boolean", default: false}
+      - { label: "Is this campaign live?", name: "live", widget: "boolean", default: true}
 
   - name: "pages"
     label: "Pages"
