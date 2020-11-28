@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import ScholarshipRoll from "../components/ScholarshipRoll";
 import AdvancedButton from "../components/AdvancedButton";
+import RedButton from "../components/RedButton"
 import "./index.scss";
 
 import Image from "gatsby-image";
@@ -26,10 +27,13 @@ export const IndexPageTemplate = ({
           <h3>{subheading}</h3>
           <AdvancedButton />
         </div>
+        <div style={{width:'100%'}}>
         <Image
           fluid={image.childImageSharp.fluid}
           alt={"Phone with the Scholly App on it"}
+          style={{width:'100%',minWidth:'500px'}}
         />
+        </div>
       </div>
       <h1 style={{ textAlign: "center" }}>As seen on</h1>
       <Image fluid={otherimage.childImageSharp.fluid} alt={"Step 1"} />
@@ -37,22 +41,37 @@ export const IndexPageTemplate = ({
         <div>
           <h1>{step1.title}</h1>
           <h3>{step1.description}</h3>
+          <div >
+          <RedButton label='Join Scholly' onClick={()=>{}}/>
+          </div>
         </div>
-        <Image fluid={step1.image.childImageSharp.fluid} />
+        <div style={{width:'100%'}}>
+        <Image style={{width:'100%',minWidth:'500px'}} fluid={step1.image.childImageSharp.fluid} />
+        </div>
       </div>
       <div className={"grid-four margins"}>
-        <Image fluid={step2.image.childImageSharp.fluid} alt={"Step 2"} />
+      <div style={{width:'100%'}}>
+        <Image style={{width:'100%',minWidth:'500px'}} fluid={step2.image.childImageSharp.fluid} alt={"Step 2"} />
+        </div>
         <div>
           <h1 style={{ textAlign: "right" }}>{step2.title}</h1>
           <h3 style={{ textAlign: "right" }}>{step2.description}</h3>
+          <div style={{ display:'grid',placeItems:'end' }}>
+          <RedButton label='Join Scholly' onClick={()=>{}}/>
+          </div>
         </div>
       </div>
       <div className={"grid-four margins"}>
         <div>
           <h1>{step3.title}</h1>
           <h3>{step3.description}</h3>
+          <div >
+          <RedButton label='Join Scholly' onClick={()=>{}}/>
+          </div>
         </div>
-        <Image fluid={step3.image.childImageSharp.fluid} alt={"Step3"} />
+        <div style={{width:'100%'}}>
+        <Image style={{width:'100%',minWidth:'500px'}} fluid={step3.image.childImageSharp.fluid} alt={"Step3"} />
+        </div>
       </div>
       <h1 style={{ textAlign: "center" }}>Here's what our users have to say</h1>
       <h3 style={{ textAlign: "center" }}>
