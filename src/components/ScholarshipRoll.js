@@ -19,7 +19,7 @@ const ScholarshipRoll = (props) => {
 
   const makeRepeated = (arr, repeats) =>
     [].concat(...Array.from({ length: repeats }, () => arr));
-  const newPosts = makeRepeated(posts, 10);
+  const newPosts = makeRepeated(posts.filter((post)=>{ return !post.node.frontmatter.live}), 10);
   /*window.woopra.config({
     domain: "myscholly.com",
   });
@@ -35,6 +35,7 @@ const ScholarshipRoll = (props) => {
     >
       <Slider>
         {newPosts.map((post, index) => {
+          console.log(post.node.frontmatter,'<---frontmatter')
           return (
             <Slide style={{ width: "300px" }} index={index}>
               <div
@@ -46,7 +47,7 @@ const ScholarshipRoll = (props) => {
               >
                 <Link
                   className="title has-text-primary is-size-4"
-                  to={post.node.fields.slug}
+                  to={`/scholarships/${post.node.frontmatter.alugAlternate}`}
                 >
                   <div
                     style={{
@@ -114,6 +115,7 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
+                alugAlternate
                 featuredpost
                 featuredimage {
                   childImageSharp {

@@ -5,6 +5,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Default from '../components/forms/Default'
+import ShortWithEssay from '../components/forms/ShortWithEssay'
 
 export const BlogPostTemplate = ({
   content,
@@ -15,9 +16,22 @@ export const BlogPostTemplate = ({
   helmet,
   termsLink,
   gradeLevels,
-  color
+  color,
+  typeOfForm,
+  essayQuestion,
+  live
 }) => {
   const PostContent = contentComponent || Content;
+  const renderForm=()=>{
+    if(typeOfForm=='Default'){
+      return <Default grades={gradeLevels}/>
+    }else if(typeOfForm=='Short with Essay'){
+      return <ShortWithEssay essayQuestion={essayQuestion} grades={gradeLevels}/>
+    }
+  }
+ if(live){
+   return <h1>This scholarship is no longer active</h1>
+ }
 
   return (
     <section className="section" style={{backgroundColor:color}}>
@@ -30,7 +44,7 @@ export const BlogPostTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
-            <Default grades={gradeLevels}/>
+            {renderForm()}
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -116,6 +130,8 @@ const BlogPost = ({ data }) => {
           typeOfForm={post.frontmatter.typeOfForm}
           gradeLevels={post.frontmatter.gradeLevels}
           color={post.frontmatter.color}
+          essayQuestion={post.frontmatter.essayQuestion}
+          live={post.frontmatter.live}
         />
       </Layout>
     </>
@@ -144,6 +160,8 @@ export const pageQuery = graphql`
         typeOfForm
         gradeLevels
         color
+        essayQuestion
+        live
       }
     }
   }

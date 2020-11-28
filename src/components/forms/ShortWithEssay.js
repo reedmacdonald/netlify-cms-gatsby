@@ -1,11 +1,9 @@
 import React from 'react'
 import '../styles.scss'
 
-const DefaultForm=(props)=>{
-    console.log(props.grades,'<---grades')
+const ShortWithEssay=(props)=>{
     return(
         <>
-        <h2>Personal</h2>
         <div className={'grid-four'}>
         <input label='First Name*' placeholder='Keanu'/>
         <input label='Last Name*' placeholder='Reeves'/>
@@ -35,21 +33,9 @@ const DefaultForm=(props)=>{
         </div>
         <br/>
         <br/>
-        <h2>Education</h2>
-        <div className={'grid-four'}>
-            <input label='Major (if applicable)' placeholder='Political Science'/>
-            <select label='State of Residence' name='state' id='state'>
-                {props.grades.map((x)=>{
-                return (<option value={x}>{x}</option>)
-                })}
-            </select>
-        <select label='1st-Generation Student' name='state' id='state'>
-            <option value='Yes'>Yes</option>
-            <option value='No'>No</option>
-        </select>
-        <input label='University' placeholder='UCLA'/>
-        </div>
+        <h3>{props.essayQuestion}</h3>
+        <textArea style={{width:'100%',marginTop:'50px'}} placeholder='Type your answer here'/>
         </>
     )
 }
-export default DefaultForm
+export default ShortWithEssay
