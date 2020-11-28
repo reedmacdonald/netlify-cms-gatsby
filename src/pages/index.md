@@ -22,8 +22,6 @@ mainpitch:
   title: Why Us
   description: |
     This is a mock site for scholarships
-title: Find life-changing scholarships made for you
-image: /img/screen-shot-2020-11-25-at-9.34.48-am.png
 otherimage: /img/screen-shot-2020-11-25-at-10.29.39-am.png
 step3:
   title: "Step III: Apply to new schalarships every month"
@@ -31,10 +29,10 @@ step3:
     never miss an opportunity to win big. Every year, the average Schalli member
     gets matched with more than $2 million dollars in scholarships!
   image: /img/screen-shot-2020-11-25-at-1.47.31-pm.png
-description: This is a mock site for schalarships
 intro:
   heading: idk
   description: idk
+title: Find life-changing schalarships made for you
 main:
   heading: Great coffee with no compromises
   description: >
@@ -51,4 +49,6 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+image: /img/screen-shot-2020-11-25-at-9.34.48-am.png
+description: This is a mock site for schalarships
 ---
