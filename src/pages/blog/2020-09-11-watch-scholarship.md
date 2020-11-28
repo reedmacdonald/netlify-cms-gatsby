@@ -35,7 +35,7 @@ gradeLevels:
   - High School Freshman
   - College Freshman
   - Graduate Student
-color: rgb(234,204,197)
+color: dodgerBlue
 protected: true
 live: false
 essayQuestion: What is the scariest thing?
