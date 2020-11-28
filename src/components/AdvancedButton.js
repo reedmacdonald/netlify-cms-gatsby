@@ -1,8 +1,9 @@
 import React from "react";
 import "./styles.scss";
-
+import Confetti from 'react-dom-confetti';
 import useWindowSize from "react-use/lib/useWindowSize";
-import Confetti from "react-confetti";
+import FlashBar from './FlashBar'
+
 
 const AdvancedButton = () => {
   const [email, setEmail] = React.useState("");
@@ -13,14 +14,27 @@ const AdvancedButton = () => {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(val);
   }
+  const config = {
+    angle: 90,
+    spread: 360,
+    startVelocity: 40,
+    elementCount: 70,
+    dragFriction: 0.12,
+    duration: 3000,
+    stagger: 3,
+    width: "10px",
+    height: "10px",
+    perspective: "500px",
+    colors: ["#f00", "#0f0", "#00f"]
+  };
   const onClick = () => {
     if (isEmail(email)) {
       setShowConfetti(true);
       setError(false);
       setTimeout(() => {
-        window.location.assign(
+       /* window.location.assign(
           `http://search.myscholly.com/register?email=${email}`
-        );
+        );*/
       }, 3000);
     } else {
       setError(true);
@@ -29,7 +43,8 @@ const AdvancedButton = () => {
 
   return (
     <>
-      {showConfetti && <Confetti width={width} height={height} gravity={0.2} />}
+    {showConfetti&&<FlashBar message={'Welcome to Scholly!'}/>}
+      <Confetti config={config} active={showConfetti} />
       <div className="holder">
         <input
           type="text"

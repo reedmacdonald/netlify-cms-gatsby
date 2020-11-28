@@ -31,6 +31,7 @@
     "react-carousel-slider": "^2.0.13",
     "react-confetti": "^6.0.0",
     "react-dom": "^16.8.4",
+    "react-dom-confetti": "^0.2.0",
     "react-helmet": "^6.0.0",
     "react-use": "^15.3.4",
     "uuid": "^7.0.0"

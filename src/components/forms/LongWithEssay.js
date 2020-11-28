@@ -1,9 +1,10 @@
 import React from 'react'
 import '../styles.scss'
 
-const ShortWithEssay=(props)=>{
+const LongWithEssay=(props)=>{
     return(
         <>
+        <h2>Personal</h2>
         <div className={'grid-four'}>
         <div>
         <h4>First Name*</h4>
@@ -54,10 +55,38 @@ const ShortWithEssay=(props)=>{
         </div>
         <br/>
         <br/>
+        <br/>
+        <br/>
+        <h2>Education</h2>
+        <div className={'grid-four'}>
+        <div>
+            <h4>Major (if applicable)</h4>
+            <input label='Major (if applicable)' placeholder='Political Science'/>
+            </div>
+            <div>
+            <h4>State of Residence</h4>
+            <select label='State of Residence' name='state' id='state'>
+                {props.grades.map((x)=>{
+                return (<option value={x}>{x}</option>)
+                })}
+            </select>
+            </div>
+            <div>
+            <h4>1st-Generation Student?</h4>
+        <select label='1st-Generation Student' name='state' id='state'>
+            <option value='Yes'>Yes</option>
+            <option value='No'>No</option>
+        </select>
+        </div>
+        <div>
+        <h4>University</h4>
+        <input label='University' placeholder='UCLA'/>
+        </div>
+        </div>
 
         <h3 style={{width:'100%',marginTop:'100px'}}>{props.essayQuestion||'In your opinion, what is the scariest thing?'}</h3>
         <textArea  style={{width:'100%',height:'250px',borderRadius:'30px'}} placeholder='Type your answer here'/>
         </>
     )
 }
-export default ShortWithEssay
+export default LongWithEssay

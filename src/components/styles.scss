@@ -61,3 +61,15 @@ select {
 select::-ms-expand {
   display: none;
 }
+.flashBar {
+  position: fixed;
+  top: 0;
+  background-color: #44d7b6;
+  color: white;
+  display: grid;
+  place-items: center;
+  height: 50px;
+  z-index: 10000000000;
+  width: 100%;
+  margin-left: -20%;
+}

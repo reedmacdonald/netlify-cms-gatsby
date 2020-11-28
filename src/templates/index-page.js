@@ -13,16 +13,13 @@ export const IndexPageTemplate = ({
   title,
   heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
   otherimage,
   step1,
   step2,
   step3,
 }) => {
   return (
-    <div style={{ width: "1100px", margin: "0 auto" }}>
+    <div style={{ width: "60%", margin: "0 auto" }}>
       <div className={"grid-four margins"}>
         <div>
           <h1>{title}</h1>
