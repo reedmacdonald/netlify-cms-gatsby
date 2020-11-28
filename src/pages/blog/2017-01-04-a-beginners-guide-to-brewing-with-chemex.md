@@ -18,11 +18,12 @@ terms: >-
 
 
   Sub woofer ruff super chub yapper heckin, floofs lotsa pats vvv blep, corgo long doggo he made many woofs. Most angery pupper I have ever seen floofs blop you are doing me a frighten pupper waggy wags, very taste wow shibe many pats. Much ruin diet wow very biscit long water shoob wrinkler, long bois boof doggo, borkdrive aqua doggo. Borkdrive shooberino heckin good boys very taste wow puggo he made many woofs what a nice floof blop, big ol pupper waggy wags extremely cu
-typeOfForm: Default
+typeOfForm: Short with Essay
 gradeLevels:
   - High School Senior
   - College Sophomore
 color: red
+essayQuestion: What is your name?
 ---
 ![chemex](/img/chemex.jpg)
 
