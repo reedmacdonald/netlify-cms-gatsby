@@ -37,7 +37,7 @@ collections:
       - { label: "Grade Levels", name: "gradeLevels", widget: "select", multiple: true, options: ["High School Freshman","High School Sophomore","High School Junior","High School Senior","College Freshman","College Sophomore","College Junior","College Senior","Graduate Student"], default: ["High School Freshman","High School Sophomore"] }
       - { label: 'Color', name: 'color', widget: 'string' }
       - { label: "Password Protected?", name: "protected", widget: "boolean", default: false, required: false}
-      - { label: "Make this campaign not live?", name: "live", widget: "boolean", default: true, required: false}
+      - { label: "Make this campaign not live?", name: "notLive", widget: "boolean", default: true, required: false}
       - { label: "What is the essay question?", name: "essayQuestion", widget: string, default: "What is the scariest thing in your opinion?", required: false}
 
   - name: "pages"

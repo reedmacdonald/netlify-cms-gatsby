@@ -16,7 +16,7 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
       color={entry.getIn(['data', 'color'])}
       typeOfForm={entry.getIn(['data', 'typeOfForm'])}
       essayQuestion={entry.getIn(['data', 'essayQuestion'])}
-      live={false}
+      notLive={false}
     />
   )
 }
