@@ -23,6 +23,7 @@ gradeLevels:
   - High School Senior
   - College Sophomore
 color: red
+live: true
 essayQuestion: What is your name?
 ---
 ![chemex](/img/chemex.jpg)
