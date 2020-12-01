@@ -11,6 +11,7 @@ import "./styles.scss";
 const Footer = class extends React.Component {
   render() {
     //console.log('idk')
+    //idk
     return (
       <div
         style={{
