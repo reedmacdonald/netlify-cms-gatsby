@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import ScholarshipRoll from "../components/ScholarshipRoll";
 import AdvancedButton from "../components/AdvancedButton";
+import FlashBar from "../components/FlashBar"
 import "./index.scss";
 
 import Image from "gatsby-image";

@@ -2,13 +2,16 @@ import React from "react";
 import "./styles.scss";
 
 import useWindowSize from "react-use/lib/useWindowSize";
-import Confetti from "react-confetti";
+import FlashBar from './FlashBar'
+import Confetti from 'react-dom-confetti';
+
 
 const AdvancedButton = () => {
   const [email, setEmail] = React.useState("");
   const { width, height } = useWindowSize();
   const [showConfetti, setShowConfetti] = React.useState(false);
   const [error, setError] = React.useState(false);
+  const [showFlashBar,setShowFlashBar]=React.useState(false)
   function isEmail(val) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(val);
@@ -17,6 +20,7 @@ const AdvancedButton = () => {
     if (isEmail(email)) {
       setShowConfetti(true);
       setError(false);
+      setShowFlashBar(true)
       setTimeout(() => {
         window.location.assign(
           `http://search.myscholly.com/register?email=${email}`
@@ -27,10 +31,13 @@ const AdvancedButton = () => {
     }
   };
 
+
   return (
     <>
-      {showConfetti && <Confetti width={width} height={height} gravity={0.2} />}
+      
       <div className="holder">
+      {showFlashBar&&<FlashBar message='Welcome to Scholly!'/>}
+      <Confetti active={showConfetti}/>
         <input
           type="text"
           className="leftThing"
