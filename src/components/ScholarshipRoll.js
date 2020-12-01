@@ -117,6 +117,7 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 alugAlternate
                 featuredpost
+                live
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 300, quality: 100) {
