@@ -7,19 +7,22 @@ const DefaultForm=(props)=>{
         <h2>Personal</h2>
         <div className={'grid-four'}>
         <div>
-        <h4>First Name*</h4>
+        <label>First Name*
         <input label='First Name*' placeholder='Keanu'/>
+        </label>
         </div>
         <div>
-        <h4>Last Name*</h4>
+        <label>Last Name*
         <input label='Last Name*' placeholder='Reeves'/>
+        </label>
         </div>
         <div>
-        <h4>Email Address*</h4>
+        <label>Email Address*
         <input label='Email Address*' placeholder='keanu@reeves.io'/>
+        </label>
         </div>
         <div>
-        <h4>Gender</h4>
+        <label>Gender
         <select label='Gender' name='gender' id='gender'>
             <option value='female'>Female</option>
             <option value='male'>Male</option>
@@ -27,9 +30,10 @@ const DefaultForm=(props)=>{
             <option value='transgender'>Transgender</option>
             <option value='decline'>I do not want to specify</option>
         </select>
+        </label>
         </div>
         <div>
-        <h4>Race/Nationality</h4>
+        <label>Race/Nationality
         <select label='Race/Nationality' name='race' id='race'>
             <option value='1'>Race1</option>
             <option value='2'>Race2</option>
@@ -37,13 +41,15 @@ const DefaultForm=(props)=>{
             <option value='4'>Race4</option>
             <option value='5'>Race5</option>
         </select>
+        </label>
         </div>
         <div>
-        <h4>Birthday</h4>
+        <label>Birthday
         <input label='Birthday' type="datetime"/>
+        </label>
         </div>
         <div>
-        <h4>State of Residence</h4>
+        <label>State of Residence
         <select label='State of Residence' name='state' id='state'>
             <option value='California'>California</option>
             <option value='New York'>New York</option>
@@ -51,6 +57,7 @@ const DefaultForm=(props)=>{
             <option value='Massachussets'>Massachusetts</option>
             <option value='North Dakota'>North Dakota</option>
         </select>
+        </label>
         </div>
         </div>
         <br/>
@@ -60,27 +67,31 @@ const DefaultForm=(props)=>{
         <h2>Education</h2>
         <div className={'grid-four'}>
         <div>
-            <h4>Major (if applicable)</h4>
-            <input label='Major (if applicable)' placeholder='Political Science'/>
+            <label>Major (if applicable)
+            <input placeholder='Political Science'/>
+            </label>
             </div>
             <div>
-            <h4>State of Residence</h4>
+            <label>State of Residence
             <select label='State of Residence' name='state' id='state'>
                 {props.grades.map((x)=>{
                 return (<option value={x}>{x}</option>)
                 })}
             </select>
+            </label>
             </div>
             <div>
-            <h4>1st-Generation Student?</h4>
+            <label>1st-Generation Student?
         <select label='1st-Generation Student' name='state' id='state'>
             <option value='Yes'>Yes</option>
             <option value='No'>No</option>
         </select>
+        </label>
         </div>
         <div>
-        <h4>University</h4>
+        <label>University
         <input label='University' placeholder='UCLA'/>
+        </label>
         </div>
         </div>
         </>
