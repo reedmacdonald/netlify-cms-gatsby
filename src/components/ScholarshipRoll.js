@@ -19,7 +19,7 @@ const ScholarshipRoll = (props) => {
 
   const makeRepeated = (arr, repeats) =>
     [].concat(...Array.from({ length: repeats }, () => arr));
-  const newPosts = makeRepeated(posts.filter((post)=>{ return !post.node.frontmatter.live}), 10);
+  const newPosts = makeRepeated(posts.filter((post)=>{ return !post.node.frontmatter.notLive}), 10);
   /*window.woopra.config({
     domain: "myscholly.com",
   });
@@ -117,6 +117,7 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 alugAlternate
                 featuredpost
+                notLive
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 300, quality: 100) {
