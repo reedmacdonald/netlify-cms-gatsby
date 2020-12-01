@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Horse Scholarship!
 alugAlternate: horse-scholarship
 date: 2017-01-04T15:04:10.000Z
-description: A scholarship for riders of horses! Yeehaw!
+description: A scholarship for riders of horses! Yeehaw! Go horses!
 featuredpost: false
 featuredimage: /img/horse.jpg
 tags:
