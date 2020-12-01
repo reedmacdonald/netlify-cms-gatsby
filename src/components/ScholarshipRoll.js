@@ -35,7 +35,6 @@ const ScholarshipRoll = (props) => {
     >
       <Slider>
         {newPosts.map((post, index) => {
-          console.log(post.node.frontmatter,'<---frontmatter')
           return (
             <Slide style={{ width: "300px" }} index={index}>
               <div
