@@ -8,11 +8,7 @@ export const HTMLContent = ({ content, className }) => (
 const Content = ({ content, className }) => (
   <div className={className}>{content}</div>
 )
-
-Content.propTypes = {
-  content: PropTypes.node,
-  className: PropTypes.string,
-}
+//what happened here
 
 HTMLContent.propTypes = Content.propTypes
 
