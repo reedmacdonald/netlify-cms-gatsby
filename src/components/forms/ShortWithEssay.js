@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles.scss'
 
 const ShortWithEssay=(props)=>{
+    console.log('hello')
     return(
         <>
         <div className={'grid-four'}>
