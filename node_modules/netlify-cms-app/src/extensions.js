@@ -2,6 +2,7 @@
 import { NetlifyCmsCore as CMS } from 'netlify-cms-core';
 
 // Backends
+import { AzureBackend } from 'netlify-cms-backend-azure';
 import { GitHubBackend } from 'netlify-cms-backend-github';
 import { GitLabBackend } from 'netlify-cms-backend-gitlab';
 import { GitGatewayBackend } from 'netlify-cms-backend-git-gateway';
@@ -25,6 +26,7 @@ import NetlifyCmsWidgetMap from 'netlify-cms-widget-map';
 import NetlifyCmsWidgetDate from 'netlify-cms-widget-date';
 import NetlifyCmsWidgetDatetime from 'netlify-cms-widget-datetime';
 import NetlifyCmsWidgetCode from 'netlify-cms-widget-code';
+import NetlifyCmsWidgetColorString from 'netlify-cms-widget-colorstring';
 
 // Editor Components
 import image from 'netlify-cms-editor-component-image';
@@ -34,6 +36,7 @@ import * as locales from 'netlify-cms-locales';
 
 // Register all the things
 CMS.registerBackend('git-gateway', GitGatewayBackend);
+CMS.registerBackend('azure', AzureBackend);
 CMS.registerBackend('github', GitHubBackend);
 CMS.registerBackend('gitlab', GitLabBackend);
 CMS.registerBackend('bitbucket', BitbucketBackend);
@@ -55,6 +58,7 @@ CMS.registerWidget([
   NetlifyCmsWidgetDate.Widget(),
   NetlifyCmsWidgetDatetime.Widget(),
   NetlifyCmsWidgetCode.Widget(),
+  NetlifyCmsWidgetColorString.Widget(),
 ]);
 CMS.registerEditorComponent(image);
 CMS.registerEditorComponent({
