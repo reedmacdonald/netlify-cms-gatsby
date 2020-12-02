@@ -51,4 +51,4 @@ essayQuestion: What is your favorite chess opening?
 ---
 ![chess pieces](/img/chess.jpg)
 
-Apply here if you like chess!
+Are you the next Magnus Carlsen? The next Garry Kasparov? The next Beth Harmon? Then apply for this chess scholarship, it's a real checkmate, mate!
