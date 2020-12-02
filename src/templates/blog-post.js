@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
   color,
   typeOfForm,
   essayQuestion,
-  live
+  notLive
 }) => {
   const PostContent = contentComponent || Content;
   const renderForm=()=>{
@@ -29,7 +29,7 @@ export const BlogPostTemplate = ({
       return <ShortWithEssay essayQuestion={essayQuestion} grades={gradeLevels}/>
     }
   }
- if(live){
+ if(notLive){
    return <h1>This scholarship is no longer active</h1>
  }
 
@@ -131,7 +131,7 @@ const BlogPost = ({ data }) => {
           gradeLevels={post.frontmatter.gradeLevels}
           color={post.frontmatter.color}
           essayQuestion={post.frontmatter.essayQuestion}
-          live={post.frontmatter.live}
+          notLive={post.frontmatter.notLive}
         />
       </Layout>
     </>
@@ -161,7 +161,7 @@ export const pageQuery = graphql`
         gradeLevels
         color
         essayQuestion
-        live
+        notLive
       }
     }
   }
