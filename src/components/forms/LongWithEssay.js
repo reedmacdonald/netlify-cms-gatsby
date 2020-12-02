@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles.scss'
 
-const DefaultForm=(props)=>{
+const LongWithEssay=(props)=>{
     return(
         <>
         <h2>Personal</h2>
@@ -63,7 +63,12 @@ const DefaultForm=(props)=>{
         </select>
         <input label='University' placeholder='UCLA'/>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <h3>{props.essayQuestion||'What do you think is the scariest thing?'}</h3>
+        <textArea style={{width:'100%',marginTop:'50px'}} placeholder='Type your answer here'/>
         </>
     )
 }
-export default DefaultForm
+export default LongWithEssay

@@ -1,11 +1,11 @@
 import React from "react";
-import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Default from '../components/forms/Default'
 import ShortWithEssay from '../components/forms/ShortWithEssay'
+import LongWithEssay from '../components/forms/LongWithEssay'
 
 export const BlogPostTemplate = ({
   content,
@@ -27,6 +27,8 @@ export const BlogPostTemplate = ({
       return <Default grades={gradeLevels}/>
     }else if(typeOfForm=='Short with Essay'){
       return <ShortWithEssay essayQuestion={essayQuestion} grades={gradeLevels}/>
+    }else{
+      return <LongWithEssay essayQuestion={essayQuestion} grades={gradeLevels}/>
     }
   }
  if(notLive){
@@ -45,19 +47,9 @@ export const BlogPostTemplate = ({
             <p>{description}</p>
             <PostContent content={content} />
             {renderForm()}
-            {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
                 <Link to={`/terms/${termsLink}`}>Terms and Conditions</Link>
               </div>
-            ) : null}
           </div>
         </div>
       </div>

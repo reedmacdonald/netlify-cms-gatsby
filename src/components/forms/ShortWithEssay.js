@@ -5,9 +5,16 @@ const ShortWithEssay=(props)=>{
     return(
         <>
         <div className={'grid-four'}>
-        <input label='First Name*' placeholder='Keanu'/>
-        <input label='Last Name*' placeholder='Reeves'/>
-        <input label='Email Address*' placeholder='keanu@reeves.io'/>
+        <label>First Name*
+        <input placeholder='Keanu'/>
+        </label>
+        <label>Last Name*
+        <input placeholder='Reeves'/>
+        </label>
+        <label>Email Address*
+        <input placeholder='keanu@reeves.io'/>
+        </label>
+        <label>Gender<br/>
         <select label='Gender' name='gender' id='gender'>
             <option value='female'>Female</option>
             <option value='male'>Male</option>
@@ -15,6 +22,8 @@ const ShortWithEssay=(props)=>{
             <option value='transgender'>Transgender</option>
             <option value='decline'>I do not want to specify</option>
         </select>
+        </label>
+        <label>Race/Nationality
         <select label='Race/Nationality' name='race' id='race'>
             <option value='1'>Race1</option>
             <option value='2'>Race2</option>
@@ -22,7 +31,11 @@ const ShortWithEssay=(props)=>{
             <option value='4'>Race4</option>
             <option value='5'>Race5</option>
         </select>
+        </label>
+        <label>Birthday
         <input label='Birthday' type="datetime-local"/>
+        </label>
+        <label>State of Residence
         <select label='State of Residence' name='state' id='state'>
             <option value='California'>California</option>
             <option value='New York'>New York</option>
@@ -30,7 +43,9 @@ const ShortWithEssay=(props)=>{
             <option value='Massachussets'>Massachusetts</option>
             <option value='North Dakota'>North Dakota</option>
         </select>
+        </label>
         </div>
+        <br/>
         <br/>
         <br/>
         <h3>{props.essayQuestion||'What do you think is the scariest thing?'}</h3>
