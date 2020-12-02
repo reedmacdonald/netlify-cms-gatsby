@@ -51,17 +51,25 @@ const LongWithEssay=(props)=>{
         <br/>
         <h2>Education</h2>
         <div className={'grid-four'}>
+        <label>Major (if applicable)
             <input label='Major (if applicable)' placeholder='Political Science'/>
+            </label>
+            <label>State of Residence
             <select label='State of Residence' name='state' id='state'>
                 {props.grades.map((x)=>{
                 return (<option value={x}>{x}</option>)
                 })}
             </select>
+            </label>
+            <label>1st-Generation Student
         <select label='1st-Generation Student' name='state' id='state'>
             <option value='Yes'>Yes</option>
             <option value='No'>No</option>
         </select>
+        </label>
+        <label>University
         <input label='University' placeholder='UCLA'/>
+        </label>
         </div>
         <br/>
         <br/>
