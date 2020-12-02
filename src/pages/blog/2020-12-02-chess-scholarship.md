@@ -3,7 +3,9 @@ templateKey: blog-post
 title: Chess Scholarship
 alugAlternate: chess-scholarship
 date: 2020-12-02T20:33:35.363Z
-description: A scholarship for people who like chess!
+description: Are you the next Magnus Carlsen? The next Garry Kasparov? The next
+  Beth Harmon? Then apply for this chess scholarship, it's a real checkmate,
+  mate!
 featuredpost: true
 featuredimage: /img/chess.jpg
 tags:
@@ -47,6 +49,6 @@ protected: false
 notLive: false
 essayQuestion: What is your favorite chess opening
 ---
-![chess pieces](/img/chess.jpg "chess pieces")
+![chess pieces](/img/chess.jpg)
 
 Apply here if you like chess!
