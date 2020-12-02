@@ -47,7 +47,7 @@ gradeLevels:
 color: dodgerBlue
 protected: false
 notLive: false
-essayQuestion: What is your favorite chess opening
+essayQuestion: What is your favorite chess opening?
 ---
 ![chess pieces](/img/chess.jpg)
 
