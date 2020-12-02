@@ -2,7 +2,6 @@ import React from 'react'
 import '../styles.scss'
 
 const ShortWithEssay=(props)=>{
-    console.log('hello')
     return(
         <>
         <div className={'grid-four'}>
@@ -34,7 +33,7 @@ const ShortWithEssay=(props)=>{
         </div>
         <br/>
         <br/>
-        <h3>{props.essayQuestion}</h3>
+        <h3>{props.essayQuestion||'What do you think is the scariest thing?'}</h3>
         <textArea style={{width:'100%',marginTop:'50px'}} placeholder='Type your answer here'/>
         </>
     )
