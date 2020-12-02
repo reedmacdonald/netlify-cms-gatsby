@@ -24,6 +24,8 @@ export const BlogPostTemplate = ({
 }) => {
 
   const PostContent = contentComponent || Content;
+  console.log(PostContent,'<---PostContent blog')
+  console.log(contentComponent,'<---contentComponent blog')
   const renderForm=()=>{
     if(typeOfForm=='Default'){
       return <Default grades={gradeLevels}/>
@@ -49,7 +51,7 @@ export const BlogPostTemplate = ({
             <p>{description}</p>
             <PostContent content={content} />
             {renderForm()}
-            <div style={{display:'grid',placeItems:'center'}}>
+            <div style={{display:'grid',placeItems:'center',marginTop:'20px'}}>
             <RedButton onClick={()=>{}} message={'submit'}/>
             </div>
               <div style={{ marginTop: `4rem` }}>
@@ -64,6 +66,7 @@ export const BlogPostTemplate = ({
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  console.log(HTMLContent,'<----html Content')
   return (
     <>
       <Layout>

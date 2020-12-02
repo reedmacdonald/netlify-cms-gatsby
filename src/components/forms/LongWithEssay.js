@@ -75,7 +75,7 @@ const LongWithEssay=(props)=>{
         <br/>
         <br/>
         <h3>{props.essayQuestion||'What do you think is the scariest thing?'}</h3>
-        <textArea style={{width:'100%',marginTop:'50px'}} placeholder='Type your answer here'/>
+        <textArea style={{width:'100%',marginTop:'20px',borderRadius:'10px'}} placeholder='Type your answer here'/>
         </>
     )
 }

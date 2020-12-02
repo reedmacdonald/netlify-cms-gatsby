@@ -36,12 +36,13 @@ const ScholarshipRoll = (props) => {
       <Slider>
         {newPosts.map((post, index) => {
           return (
-            <Slide style={{ width: "300px" }} index={index}>
+            <Slide style={{ width: "300px",height:'350px' }} index={index}>
               <div
                 style={{
                   borderRadius: "20px",
                   backgroundColor: "rgb(245,245,245)",
                   margin: "15px",
+                  height:'300px'
                 }}
               >
                 <Link
@@ -82,7 +83,7 @@ const ScholarshipRoll = (props) => {
                         marginTop: "10px",
                       }}
                     >
-                      {post.node.excerpt.substring(0, 100) + "..."}
+                      {post.node.frontmatter.description.length>100?post.node.frontmatter.description.substring(0, 100) + "...":post.node.frontmatter.description}
                     </p>
                   </div>
                 </Link>
@@ -116,6 +117,7 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 alugAlternate
                 featuredpost
+                description
                 notLive
                 featuredimage {
                   childImageSharp {
