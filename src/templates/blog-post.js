@@ -6,6 +6,7 @@ import Content, { HTMLContent } from "../components/Content";
 import Default from '../components/forms/Default'
 import ShortWithEssay from '../components/forms/ShortWithEssay'
 import LongWithEssay from '../components/forms/LongWithEssay'
+import RedButton from '../components/RedButton'
 
 export const BlogPostTemplate = ({
   content,
@@ -47,6 +48,9 @@ export const BlogPostTemplate = ({
             <p>{description}</p>
             <PostContent content={content} />
             {renderForm()}
+            <div style={{display:'grid',placeItems:'center'}}>
+            <RedButton onClick={()=>{}} message={'submit'}/>
+            </div>
               <div style={{ marginTop: `4rem` }}>
                 <Link to={`/terms/${termsLink}`}>Terms and Conditions</Link>
               </div>
