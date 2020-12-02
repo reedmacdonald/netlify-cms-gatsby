@@ -22,6 +22,7 @@ export const BlogPostTemplate = ({
   essayQuestion,
   notLive
 }) => {
+
   const PostContent = contentComponent || Content;
   const renderForm=()=>{
     if(typeOfForm=='Default'){
@@ -63,7 +64,6 @@ export const BlogPostTemplate = ({
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
-
   return (
     <>
       <Layout>
