@@ -51,7 +51,11 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
             {renderForm()}
             <div style={{display:'grid',placeItems:'center',marginTop:'20px'}}>
-            <RedButton onClick={()=>{}} message={'submit'}/>
+            <RedButton onClick={()=>{window.woopra.config({
+    domain: "myscholly.com",
+  });
+  window.woopra.track('Submitted Fake Essay',{fakeEssayName:title});
+  alert(`You have applied to the ${title}`)}} message={'submit'}/>
             </div>
               <div style={{ marginTop: `4rem` }}>
                 <Link to={`/terms/${termsLink}`}>Terms and Conditions</Link>
