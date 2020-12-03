@@ -24,8 +24,7 @@ const ScholarshipRoll = (props) => {
     domain: "myscholly.com",
   });
   window.woopra.track("Experiment, please disregard", {});
-  That worked!
-  */
+  That worked!*/
   return (
     <CarouselProvider
       naturalSlideWidth={100}
@@ -36,7 +35,7 @@ const ScholarshipRoll = (props) => {
       <Slider>
         {newPosts.map((post, index) => {
           return (
-            <Slide style={{ width: "300px",height:'350px' }} index={index}>
+            <Slide style={{ width: "300px", height:'350px' }} index={index}>
               <div
                 style={{
                   borderRadius: "20px",
