@@ -180,6 +180,7 @@ exports.createPages = ({ actions, graphql }) => {
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }
+    schollys.forEach((scholly, index) => { console.log(moneys[index], requirements[index]) })
 
     const posts = result.data.allMarkdownRemark.edges;
 
