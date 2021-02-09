@@ -38,6 +38,7 @@ export const BlogPostTemplate = ({
                             {money} {' '}{title}{' '} Scholarship
                         </h1>
                         <h3>Requirements: {requirements}</h3>
+                        <h3>This scholarship is fake.</h3>
                         {renderForm()}
                         <div style={{ display: 'grid', placeItems: 'center', marginTop: '20px' }}>
                             <RedButton onClick={() => {
