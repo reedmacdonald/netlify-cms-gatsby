@@ -2,6 +2,12 @@ const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { fmImagesToRelative } = require("gatsby-remark-relative-images");
+const toSnakeCase = str =>
+  str &&
+  str
+    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+    .map(x => x.toLowerCase())
+    .join('_');
 
 const schollys = ["High School Class of 2021",
   "2021 High School Juniors ",
@@ -180,7 +186,23 @@ exports.createPages = ({ actions, graphql }) => {
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }
-    schollys.forEach((scholly, index) => { console.log(moneys[index], requirements[index]) })
+    schollys.forEach((scholly, index) => {
+      console.log(moneys[index], requirements[index])
+      createPage({
+        path: `/scholarships/${toSnakeCase(scholly)}`,
+        tags: ["hello", "world"],
+        component: path.resolve(
+          `src/templates/new-scholarship.js`
+        ),
+        context: {
+          title: scholly
+        },
+      });
+
+
+
+
+    })
 
     const posts = result.data.allMarkdownRemark.edges;
 
