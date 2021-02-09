@@ -9,6 +9,10 @@ const toSnakeCase = str =>
     .map(x => x.toLowerCase())
     .join('_');
 
+const getScholarships = () => {
+  return { schollysFake: schollys, requirementsFake: requirements, moneysFake: moneys }
+}
+
 const schollys = ["High School Class of 2021",
   "2021 High School Juniors ",
   "2021 College Students Only",
@@ -186,24 +190,32 @@ exports.createPages = ({ actions, graphql }) => {
       result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }
-    schollys.forEach((scholly, index) => {
-      console.log(moneys[index], requirements[index])
-      console.log(`/scholarships/${toSnakeCase(scholly)}`)
+    createPage({
+      path: `/list-of-scholarships`,
+      component: path.resolve(
+        `src/templates/list-of-scholarships.js`
+      ),
+      context: {
+        titles: getScholarships(),
+
+      },
+    });
+    const { schollysFake, moneysFake, requirementsFake } = getScholarships()
+    schollysFake.forEach((scholly, index) => {
+
       createPage({
         path: `/scholarships/${toSnakeCase(scholly)}`,
-        tags: ["hello", "world"],
         component: path.resolve(
           `src/templates/new-scholarship.js`
         ),
         context: {
           title: scholly,
-          money: moneys[index],
-          requirements: requirements[index]
+          money: moneysFake[index],
+          requirements: requirementsFake[index]
         },
       });
       createPage({
         path: `/terms-and-conditions/${toSnakeCase(scholly)}`,
-        tags: ["hello", "world"],
         component: path.resolve(
           `src/templates/new-terms.js`
         ),
