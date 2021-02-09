@@ -6,14 +6,14 @@ import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, realTitle, realDescription }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{realTitle || title}</title>
+        <meta name="description" content={realDescription || description} />
 
         <link
           rel="apple-touch-icon"
@@ -41,7 +41,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={realTitle || title} />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"

@@ -17,7 +17,8 @@ const toSnakeCase = str =>
 export const BlogPostTemplate = ({
     title,
     money,
-    requirements
+    requirements,
+    helmet
 }) => {
 
 
@@ -29,6 +30,7 @@ export const BlogPostTemplate = ({
 
     return (
         <section className="section" style={{ backgroundColor: 'white' }}>
+            {helmet || ""}
             <div className="container content">
                 <div className="columns">
                     <div className="column is-10 is-offset-1">
@@ -57,7 +59,7 @@ export const BlogPostTemplate = ({
 const NewScholarship = ({ pageContext }) => {
     return (
         <>
-            <Layout>
+            <Layout realTitle={`${pageContext.money} ${pageContext.title} scholarship`} realDescription={`Apply here to the ${pageContext.money} ${pageContext.title} scholarship`}>
                 <BlogPostTemplate
                     title={pageContext.title}
                     money={pageContext.money}
