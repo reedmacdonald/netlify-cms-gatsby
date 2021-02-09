@@ -188,6 +188,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
     schollys.forEach((scholly, index) => {
       console.log(moneys[index], requirements[index])
+      console.log(`/scholarships/${toSnakeCase(scholly)}`)
       createPage({
         path: `/scholarships/${toSnakeCase(scholly)}`,
         tags: ["hello", "world"],
@@ -195,7 +196,9 @@ exports.createPages = ({ actions, graphql }) => {
           `src/templates/new-scholarship.js`
         ),
         context: {
-          title: scholly
+          title: scholly,
+          money: moneys[index],
+          requirements: requirements[index]
         },
       });
 

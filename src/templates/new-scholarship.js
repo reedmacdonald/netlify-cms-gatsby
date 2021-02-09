@@ -10,6 +10,8 @@ import RedButton from '../components/RedButton'
 
 export const BlogPostTemplate = ({
     title,
+    money,
+    requirements
 }) => {
 
 
@@ -25,7 +27,7 @@ export const BlogPostTemplate = ({
                 <div className="columns">
                     <div className="column is-10 is-offset-1">
                         <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-                            {title}
+                            {money} +{' '}{title}+{' '} Scholarship
                         </h1>
                         {renderForm()}
                         <div style={{ display: 'grid', placeItems: 'center', marginTop: '20px' }}>
@@ -34,7 +36,7 @@ export const BlogPostTemplate = ({
                                     domain: "myscholly.com",
                                 });
                                 window.woopra.track('Submitted Fake Essay', { fakeEssayName: title });
-                                alert(`You have applied to the ${title}`)
+                                alert(`You have applied to the ${title} Scholarship`)
                             }} message={'submit'} />
                         </div>
 
@@ -51,6 +53,8 @@ const NewScholarship = ({ pageContext }) => {
             <Layout>
                 <BlogPostTemplate
                     title={pageContext.title}
+                    money={pageContext.money}
+                    requirements={pageContext.requirements}
                 />
             </Layout>
         </>
