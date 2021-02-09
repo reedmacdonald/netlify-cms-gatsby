@@ -201,6 +201,16 @@ exports.createPages = ({ actions, graphql }) => {
           requirements: requirements[index]
         },
       });
+      createPage({
+        path: `/terms-and-conditions/${toSnakeCase(scholly)}`,
+        tags: ["hello", "world"],
+        component: path.resolve(
+          `src/templates/new-terms.js`
+        ),
+        context: {
+          title: scholly,
+        },
+      });
 
 
 
