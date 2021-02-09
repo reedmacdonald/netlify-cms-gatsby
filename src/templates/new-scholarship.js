@@ -35,6 +35,7 @@ export const BlogPostTemplate = ({
                         <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                             {money} {' '}{title}{' '} Scholarship
                         </h1>
+                        <h3>Requirements: {requirements}</h3>
                         {renderForm()}
                         <div style={{ display: 'grid', placeItems: 'center', marginTop: '20px' }}>
                             <RedButton onClick={() => {
@@ -61,6 +62,48 @@ const NewScholarship = ({ pageContext }) => {
                     title={pageContext.title}
                     money={pageContext.money}
                     requirements={pageContext.requirements}
+                    helmet={
+                        <Helmet titleTemplate="%s">
+                            <title>{pageContext.title || "title"}</title>
+                            <meta
+                                name="description"
+                                content={`Apply here to the ${pageContext.money} ${pageContext.title} scholarship` || "description"}
+                            />
+
+                            <meta
+                                property="og:title"
+                                content={pageContext.title || "title"}
+                            />
+                            <meta
+                                property="og:description"
+                                content={`Apply here to the ${pageContext.money} ${pageContext.title} scholarship` || "description"}
+                            />
+                            <meta property="og:type" content={"article"} />
+                            <meta
+                                property="og:image"
+                                content={
+
+                                    null
+                                }
+                            />
+                            <meta name="twitter:card" content="summary_large_image" />
+                            <meta
+                                name="twitter:title"
+                                content={pageContext.title || "title"}
+                            />
+                            <meta
+                                name="twitter:description"
+                                content={`Apply here to the ${pageContext.money} ${pageContext.title} scholarship` || "description"}
+                            />
+                            <meta
+                                property="og:url"
+                                content={
+                                    `https://gallant-ptolemy-269c61.netlify.app/scholarships/${toSnakeCase(pageContext.title)}` ||
+                                    "https://google.com"
+                                }
+                            />
+                        </Helmet>
+                    }
                 />
             </Layout>
         </>

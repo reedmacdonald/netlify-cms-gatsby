@@ -200,6 +200,8 @@ exports.createPages = ({ actions, graphql }) => {
 
       },
     });
+
+    //I was going to switch this out with the one you made, Evan
     const { schollysFake, moneysFake, requirementsFake } = getScholarships()
     schollysFake.forEach((scholly, index) => {
 
