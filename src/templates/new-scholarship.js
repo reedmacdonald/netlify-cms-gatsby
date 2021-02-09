@@ -58,6 +58,7 @@ export const BlogPostTemplate = ({
 };
 
 const NewScholarship = ({ pageContext }) => {
+    let newTitle = `${pageContext.money} ${pageContext.title} scholarship`
     return (
         <>
             <Layout realTitle={`${pageContext.money} ${pageContext.title} scholarship`} realDescription={`Apply here to the ${pageContext.money} ${pageContext.title} scholarship`}>
@@ -67,7 +68,7 @@ const NewScholarship = ({ pageContext }) => {
                     requirements={pageContext.requirements}
                     helmet={
                         <Helmet titleTemplate="%s">
-                            <title>{pageContext.title || "title"}</title>
+                            <title>{newTitle || "title"}</title>
                             <meta
                                 name="description"
                                 content={`Apply here to the ${pageContext.money} ${pageContext.title} scholarship` || "description"}
@@ -75,7 +76,7 @@ const NewScholarship = ({ pageContext }) => {
 
                             <meta
                                 property="og:title"
-                                content={pageContext.title || "title"}
+                                content={newTitle || "title"}
                             />
                             <meta
                                 property="og:description"
@@ -92,7 +93,7 @@ const NewScholarship = ({ pageContext }) => {
                             <meta name="twitter:card" content="summary_large_image" />
                             <meta
                                 name="twitter:title"
-                                content={pageContext.title || "title"}
+                                content={newTitle || "title"}
                             />
                             <meta
                                 name="twitter:description"
