@@ -7,6 +7,12 @@ import Default from '../components/forms/Default'
 import ShortWithEssay from '../components/forms/ShortWithEssay'
 import LongWithEssay from '../components/forms/LongWithEssay'
 import RedButton from '../components/RedButton'
+const toSnakeCase = str =>
+    str &&
+    str
+        .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+        .map(x => x.toLowerCase())
+        .join('_');
 
 export const BlogPostTemplate = ({
     title,
@@ -39,11 +45,11 @@ export const BlogPostTemplate = ({
                                 alert(`You have applied to the ${title} Scholarship`)
                             }} message={'submit'} />
                         </div>
-
+                        <Link to={`/terms-and-conditions/${toSnakeCase(title)}`}>Term and Conditions</Link>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
