@@ -27,7 +27,7 @@ export const BlogPostTemplate = ({
                 <div className="columns">
                     <div className="column is-10 is-offset-1">
                         <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-                            {money} +{' '}{title}+{' '} Scholarship
+                            {money} {' '}{title}{' '} Scholarship
                         </h1>
                         {renderForm()}
                         <div style={{ display: 'grid', placeItems: 'center', marginTop: '20px' }}>
