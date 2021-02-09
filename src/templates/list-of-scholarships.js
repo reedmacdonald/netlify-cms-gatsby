@@ -22,9 +22,9 @@ export const AboutPageTemplate = ({ titles }) => {
                             <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                                 List of <u>Fake</u> Scholarships
                             </h2>
-                            {<React.Fragment>{titles.schollysFake.map((name) => {
+                            {<React.Fragment>{titles.schollysFake.map((name, index) => {
                                 return (<div>
-                                    <Link to={`/scholarships/${toSnakeCase(name)}`}>{name}</Link>
+                                    <Link to={`/scholarships/${toSnakeCase(name)}`}>{titles.moneysFake[index] + ' '}{name + ' Scholarship'}</Link>
                                 </div>)
                             })}</React.Fragment>}
                         </div>
